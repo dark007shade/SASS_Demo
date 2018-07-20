@@ -1,0 +1,10 @@
+
+@function set-text-color($font-color) {
+  // @if (lightness($font-color) > 49%) {
+  @if ((red($font-color)*0.299 + green($font-color)*0.587 + blue($font-color)*0.114) > 186) {
+    @return #000; // Lighter backgorund, return dark color
+  }
+  @else {
+    @return #fff; // Darker background, return light color
+  }
+}

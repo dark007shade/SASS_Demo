@@ -1,0 +1,28 @@
+.my-box-container {
+  padding: 20px 0;
+  background-color: #ddd;
+}
+
+
+@mixin my-box {
+  .my-box {
+    width: 20%;
+    padding: 20px;
+    border: 1px solid #000;
+    @include border-radius(15px);
+    margin: 5px auto;
+    @include transitions($transition-type:background-color);
+    @include my-box-colored();
+  }
+}
+
+@mixin my-box-colored($background-color:black, $color:white) {
+  color: $color;
+  background-color: darken($background-color, 25%);
+  &:hover {
+    background-color: darken($background-color, 10%);
+
+  }
+}
+
+@include my-box;

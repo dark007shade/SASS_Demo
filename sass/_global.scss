@@ -1,0 +1,91 @@
+/* -----------------------------------------
+ *            GLOBAL STYLES
+ *----------------------------------------- */
+
+/* -----------------------------------------
+ *                FONTS
+ *----------------------------------------- */
+
+$font-color: #000;
+$font-family: 'Tajawal',
+sans-serif !important;
+
+/* -----------------------------------------
+ *               END FONTS
+ *----------------------------------------- */
+
+/* Prevent adjustments of font size after orientation change in IE on Windows phone and in IOS */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  min-height: 100%;
+}
+
+/* Apply a natural box model to all elements */
+
+* {
+  font-family: $font-family;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+body {
+  padding: 0 !important;
+  margin: 0 auto !important;
+  font-size: 16px;
+  color: $font-color;
+  background: white;
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0px auto;
+}
+
+/* -----------------------------------------
+ *                END GLOBAL
+ *----------------------------------------- */
+
+/* -----------------------------------------
+ *                  MIXINS
+ *----------------------------------------- */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transform($translation) {
+  -webkit-transform: $translation;
+  transform: $translation;
+}
+
+@mixin transitions($transition-type) {
+  transition: $transition-type 0.4s ease 0s;
+}
+
+
+/* -----------------------------------------
+ *                END MIXINS
+ *----------------------------------------- */
